@@ -18,12 +18,12 @@ def rename_files():
 
 # create the GUI
 root = Tk()
-root.geometry("400x150")
+root.geometry("600x200")
 
 # create a button for selecting the folder
 folder_label = Label(root, text="Folder path:")
 folder_label.pack()
-folder_entry = Entry(root)
+folder_entry = Entry(root, width=70, font=("Helvetica", 14))
 folder_entry.pack()
 folder_button = Button(root, text="Select Folder", command=lambda: folder_entry.insert(0, filedialog.askdirectory()))
 folder_button.pack()
@@ -31,13 +31,13 @@ folder_button.pack()
 # create a text entry for the string
 text_label = Label(root, text="Text string:")
 text_label.pack()
-text_entry = Entry(root)
+text_entry = Entry(root, width=70, font=("Helvetica", 14))
 text_entry.pack()
 
 # create a number entry for the starting number
 number_label = Label(root, text="Starting number:")
 number_label.pack()
-number_entry = Entry(root)
+number_entry = Entry(root, width=70, font=("Helvetica", 14))
 number_entry.pack()
 
 # create a button for renaming the files
